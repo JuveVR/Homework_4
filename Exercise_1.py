@@ -14,13 +14,16 @@ def song_text(string_num=3, la_num=3, last_symbol=1):
     word = "la"
     song_string = [word for i in range(la_num)]
     counter = 0
+    res = ''
     for i in range(string_num):
         counter += 1
         if counter == string_num and last_symbol==1:
-            print("-".join(song_string)+"!")
+            res += "-".join(song_string)+"!"
         elif counter == string_num and last_symbol==0:
-            print("-".join(song_string) + ".")
+            res += "-".join(song_string) + "."
         else:
-            print("-".join(song_string))
+            res += "-".join(song_string)
+    return res
 
-song_text()
+if __name__ == "__main__":
+    song_text()
